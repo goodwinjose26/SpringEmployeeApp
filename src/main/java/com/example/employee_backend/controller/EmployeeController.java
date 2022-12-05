@@ -10,4 +10,10 @@ public class EmployeeController {
     {
         return "WELCOME EMPLOYEE";
     }
+
+    @GetMapping("/view")
+    public String view()
+    {
+        return "VIEW EMPLOYEE DETAILS";
+    }
 }
