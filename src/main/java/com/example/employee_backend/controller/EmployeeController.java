@@ -22,4 +22,10 @@ public class EmployeeController {
     {
         return "ADD EMPLOYEE DETAILS";
     }
+
+    @GetMapping("/search")
+    public String search()
+    {
+        return "SEARCH EMPLOYEE ";
+    }
 }
