@@ -24,7 +24,14 @@ public Map<String,String> add(@RequestBody Employee e)
     return map;
 }
 
-
+    @CrossOrigin(origins = "*")
+    @PostMapping(path = "/search",consumes = "application/json",produces = "application/json")
+    public List<Employee> searchEmployee(@RequestBody Employee e)
+    {
+        String empcode=String.valueOf(e.getEmpcode());
+        System.out.println(empcode);
+        return (List<Employee>) dao.searchEmployee(e.getEmpcode());
+    }
 
     @CrossOrigin(origins = "*")
 
